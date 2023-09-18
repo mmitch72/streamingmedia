@@ -1,0 +1,333 @@
+
+/*CSS RESET*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+
+/*Start of CSS styling*/
+html {
+    box-sizing: border-box;
+    background-color: #020659;
+}
+body {
+    width: 375px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+header {
+    margin-top: 100px;
+    background-image: linear-gradient(to right, #2104D9 , black);
+    color: white;
+    padding: 25px 25px 25px 25px;
+}
+header p {
+    padding-top: 15px;
+    font-size: 1em;
+}
+h1 {
+    font-size: 1.25em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+nav a {
+    text-decoration: none;
+    color: white;
+}
+main h2 {
+    font-size: 1em;
+    color: #590242;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-left: 25px;
+    padding-bottom: 25px;
+}
+.scroll {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.scroll section {
+    margin: 10px;
+    position: relative;
+}
+.scroll div {
+    position: absolute;
+    top: 251px;
+    background-color: rgba(255,255,255,.75);
+    padding: 5px;
+    height: 50px;
+    width: 350px;
+}
+audio {
+    position: absolute;
+    left: 5px;
+    bottom: 150px;
+    z-index: 1;
+}
+#trending h3 {
+    font-size: 1em;
+    color: #590242;
+    font-weight: bold;
+}
+dl {
+    color: #590242;
+    font-size: small;
+    display: flex;
+}
+dt {
+    font-style: italic;
+    padding-right: 10px;
+}
+#playlists {
+    background-color: #2699fb;
+}
+#playlists h2 {
+    background-color: white;
+}
+#playlists section {
+    text-align: center;
+    color: white;
+    background-color: #0D8DFB;
+    padding: 5px;
+}
+#playlists h3 {
+    text-transform: capitalize;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+#curated {
+    background-color: #030A8C;
+}
+#curated h2 {
+    background-color: white;
+}
+#curated section {
+    text-align: center;
+    color: white;
+    background-color: #020873;
+    padding: 5px;
+}
+#curated h3 {
+    text-transform: capitalize;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+.more {
+    background-color: white;
+    padding: 25px;
+}
+.more a {
+    font-size: smaller;
+    text-decoration: none;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-right: 25px;
+    padding-left: 25px;
+    background-color: #590242;
+    border-radius: 5px;
+    color: white;
+    border-top: 10px;
+    border-bottom: 20px;
+}
+.more a:hover {
+    background-color: #020659;
+}
+#trending ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 15px #590242;
+}
+#trending ::-webkit-scrollbar-thumb {
+    background: #590242;
+    border-radius: 5px;
+}
+#trending ::-webkit-scrollbar-thumb:hover {
+    background: #020659;
+}
+#playlists ::-webkit-scrollbar, #curated ::-webkit-scrollbar {
+    width: 15px;
+}
+#playlists ::-webkit-scrollbar-track, #curated ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 15px #020659;
+}
+#playlists ::-webkit-scrollbar-thumb, #curated ::-webkit-scrollbar-thumb {
+    background: #020659;
+    border-radius: 5px;
+}
+#playlists ::-webkit-scrollbar-thumb:hover, #curated ::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+}
+
+
+
+
+
+footer p {
+    font-size: .75em;
+    color: #590242;
+    text-align: center;
+    margin-top: 75px;
+    padding-bottom: 25px;
+}
+
+/*Menu Code for Mobile First Style (minus the bits you know how to do): */
+
+
+ul {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+label span {
+    background-color: #ffffff;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background-color .2s ease-out;
+    width: 18px;
+}
+label span:before, label span:after {
+    background: #ffffff;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+label span:before {
+    top: 5px;
+}
+label span:after {
+    top: -5px;
+}
+input {
+    display: none;
+}
+input:checked ~ ul {
+    max-height: 500px;
+}
+input:checked ~ label span {
+    background: transparent;
+}
+input:checked ~ label span:before {
+    transform: rotate(-45deg);
+}
+input:checked ~ label span:after {
+    transform: rotate(45deg);
+}
+input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
+    top: 0;
+}
+
+
+
+
+
+@media screen and (min-width:834px) {
+    body {
+        width: 834px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+    }
+    #playlists {
+        float: left;
+        width: 50%;
+    }
+    #playlists .scroll {
+
+        display: grid;
+        grid-template-columns: 1fr;
+        overflow-x: hidden;
+        overflow-y: auto;
+        
+    }
+    #curated .scroll {
+
+        display: grid;
+        grid-template-columns: 1fr;
+        overflow-x: hidden;
+        overflow-y: auto;
+        
+    }
+    nav li {
+        display: inline;
+        padding-right: 35px;
+
+    }
+    nav a {
+        padding: 10px;
+
+    }
+    nav li:first-child {
+        text-transform: capitalize;
+        font-weight: bold;
+        font-size: x-large;
+    }
+    ul {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        text-transform:uppercase;
+        overflow: visible;
+        position: absolute;
+        top: 30px;
+
+    }
+    label span, input {
+        display: none;
+    }
+}
+
